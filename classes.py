@@ -48,8 +48,7 @@ class IsoscelesTriangle(Triangle):
     def __init__(self, side1, side2, angle):
         super().__init__(side1, side2, angle)
 
-    def area(self): # Якщо вважати, що 1 з заданих сторін є основою рівнобедренного трикутника
-        
-
-t = IsoscelesTriangle(3, 4, 90)
-print(t.perimeter())
+    def area(self):  # Якщо вважати, що side1 є основою рівнобедренного трикутника
+        h = math.sqrt(self.side2 ** 2 - (self.side1 / 2) ** 2)
+        a = (self.side1 * h) / 2
+        return a
